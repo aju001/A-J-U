@@ -2,7 +2,7 @@
 <p align="center">
 	<img src="https://i.ibb.co/Y2mXdR5/ajuser.jpg" width="200" style="margin-left: auto;margin-right: auto;display: block;">
 </p>
-<h1 align="center">AJU</h1>
+<h1 align="center">A-J-U</h1>
 
 # FOR THE SESSION !!
 
