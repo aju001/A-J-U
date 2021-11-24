@@ -351,7 +351,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), 'made with ❤️ by ariffb', 'Pemilik Bot', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
+    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), 'made with 🤍 by Aju', 'Owner', `${_p}owner`, 'Aju', `${_p}Aju`, m)
   } catch (e) {
     conn.reply(m.chat, 'Sorry, Try Again', m)
     throw e
@@ -359,7 +359,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 }
 handler.help = ['menu', 'help','list','aju', '?']
 handler.tags = ['main']
-handler.command = /^(menu|help|eva|list|\?)$/i
+handler.command = /^(menu|help|aju|list|\?)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
