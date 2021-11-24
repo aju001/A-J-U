@@ -173,10 +173,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
            *TIME* : ${time},
            *WEEK* : ${week},
            *DATE* : ${date},
-           *OWNER* : Anirudh,
+           *OWNER* : Aju,
           📣 *Note* : Don't spam bot`
           .trim(),
-           "description": "© Eva",
+           "description": "© Aju",
           "buttonText": "Click  Here",
           "listType": "SINGLE_SELECT",
           "sections": [
@@ -351,7 +351,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonLoc(m.chat, await (await fetch("https://telegra.ph/file/e32f2651bac64b6d62c81.jpg")).buffer(), text.trim(), 'Made With 🤍 by Aju', 'Owner Bot', ',owner', 'All Commands', '.? all', m)
+    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), 'made with ❤️ by ariffb', 'Pemilik Bot', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
   } catch (e) {
     conn.reply(m.chat, 'Sorry, Try Again', m)
     throw e
