@@ -9,13 +9,13 @@
 FORK THIS REPL..
 
 
-[![FORK THIS REPL](https://repl.it/badge/github/quiec/whatsasena)](https://replit.com/@SudoAnirudh/E-V-A-QR#)
 
-<a href="https://ibb.co/c8QJHfw"><img src="https://i.ibb.co/qgpBfqC/Screenshot-2021-11-03-115847.png" alt="Screenshot-2021-11-03-115847" border="0"></a>
 
-<h1 align="centre"> Or</h1>
 
-<a href="https://ibb.co/c8QJHfw"><img src="https://i.ibb.co/qgpBfqC/Screenshot-2021-11-03-115847.png" alt="Screenshot-2021-11-03-115847" border="0"></a>
+
+
+
+
 																	     
 ## ERROR FIX IT YOURSELF
 
