@@ -6,45 +6,39 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┌─〔 %me 〕
-├ Hai, %name!
-│
-├ Tersisa *%limit Limit*
-├ Role *%role*
-├ Level *%level (%exp / %maxexp)* [%xp4levelup]
-├ %totalexp XP secara Total
-│ 
-├ Tanggal: *%week %weton, %date*
-├ Tanggal Islam: *%dateIslamic*
-├ Waktu: *%time*
-│
-├ Uptime: *%uptime (%muptime)*
-├ Database: %rtotalreg dari %totalreg
-├ Github:
-├ %github
-└────
+━━━━ 「 *AJU* 」 ━━━━͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏
+
+     ✪〔 %me 〕✪
+🔸Hai, %name!
+
+🔸 Github:https://github.com/aju001
+
+🔸Instagram:https://www.instagram.com/__ajuz___001
+
+     〘 AJU 〙
 %readmore`.trimStart(),
   header: '┌─〔 %category 〕',
-  body: '├ %cmd %islimit %isPremium',
+  body: '├ %cmd',
   footer: '└────\n',
   after: `
-*%npmname@^%version*
+*%npmname@*
 ${'```%npmdesc```'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   let tags
   let teks = `${args[0]}`.toLowerCase()
-  let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
+  let arrayMenu = ['all', 'game', 'xp', 'stiker','quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools','anime','videomaker', 'fun', 'database', 'audio','info','owner']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
-    'main': 'Utama',
+    'main': 'Main',
     'game': 'Game',
     'xp': 'Exp & Limit',
+    'anime': 'Anime',
     'sticker': 'Stiker',
-    'kerang': 'Kerang Ajaib',
+    'shell': 'Magic Shells',
     'quotes': 'Quotes',
-    'admin': `Admin ${global.opts['restrict'] ? '' : '(Dinonaktifkan)'}`,
+    'admin': `Admin ${global.opts['restrict'] ? '' : '(Disabled)'}`,
     'group': 'Grup',
     'premium': 'Premium',
     'internet': 'Internet',
@@ -52,15 +46,13 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'nulis': 'MagerNulis & Logo',
     'downloader': 'Downloader',
     'tools': 'Tools',
+    'Video Maker':'videomaker',
     'fun': 'Fun',
     'database': 'Database',
     'vote': 'Voting',
-    'absen': 'Absen',
-    'quran': 'Al Qur\'an',
-    'audio': 'Pengubah Suara',
-    'jadibot': 'Jadi Bot',
+    'audio': 'Voice Changer',
     'info': 'Info',
-    '': 'Tanpa Kategori',
+    '': 'No Category',
   }
   if (teks == 'game') tags = {
     'game': 'Game'
@@ -71,20 +63,23 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   if (teks == 'stiker') tags = {
     'sticker': 'Stiker'
   }
-  if (teks == 'kerangajaib') tags = {
-    'kerang': 'Kerang Ajaib'
+  if (teks == 'shell') tags = {
+    'shell': 'Magic Shells'
   }
   if (teks == 'quotes') tags = {
     'quotes': 'Quotes'
   }
   if (teks == 'admin') tags = {
-    'admin': `Admin ${global.opts['restrict'] ? '' : '(Dinonaktifkan)'}`
+    'admin': `Admin ${global.opts['restrict'] ? '' : '(Disabled)'}`
   }
   if (teks == 'grup') tags = {
     'group': 'Grup'
   }
   if (teks == 'premium') tags = {
     'premium': 'Premium'
+  }
+  if (teks == 'videomaker') tags = {
+    'videomaker': 'Video Maker'
   }
   if (teks == 'internet') tags = {
     'internet': 'Internet'
@@ -104,27 +99,18 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   if (teks == 'fun') tags = {
     'fun': 'Fun'
   }
+  if (teks == 'anime') tags = {
+    'anime': 'Anime'
+  }
   if (teks == 'database') tags = {
     'database': 'Database'
+  }
+  if (teks == 'audio') tags = {
+    'audio': 'Voice Changer'
   }
   if (teks == 'vote') tags = {
     'vote': 'Voting',
     'absen': 'Absen'
-  }
-  if (teks == 'quran') tags = {
-    'quran': 'Al Qur\'an'
-  }
-  if (teks == 'audio') tags = {
-    'audio': 'Pengubah Suara'
-  }
-  if (teks == 'jadibot') tags = {
-    'jadibot': 'Jadi Bot'
-  }
-  if (teks == 'info') tags = {
-    'info': 'Info'
-  }
-  if (teks == 'tanpakategori') tags = {
-    '': 'Tanpa Kategori'
   }
   if (teks == 'owner') tags = {
     'owner': 'Owner',
@@ -140,7 +126,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let name = registered ? global.db.data.users[m.sender].name : conn.getName(m.sender)
     let d = new Date(new Date + 3600000)
-    let locale = 'id'
+    let locale = 'en'
     // d.getTimeZoneOffset()
     // Offset -420 is 18.00
     // Offset    0 is  0.00
@@ -152,11 +138,6 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       month: 'long',
       year: 'numeric'
     })
-    let dateIslamic = Intl.DateTimeFormat(locale + '-TN-u-ca-islamic', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
-    }).format(d)
     let time = d.toLocaleTimeString(locale, {
       hour: 'numeric',
       minute: 'numeric',
@@ -188,107 +169,102 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     if (teks == '404') {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
-          "title": `${ucapan()}, ${name}`.trim(),
-          "description": "© stikerin",
-          "buttonText": "Klik Disini",
+          "title": `${ucapan()}, ${name}
+           *TIME* : ${time},
+           *WEEK* : ${week},
+           *DATE* : ${date},
+           *OWNER* : Anirudh,
+          📣 *Note* : Don't spam bot`
+          .trim(),
+           "description": "© Eva",
+          "buttonText": "Click  Here",
           "listType": "SINGLE_SELECT",
           "sections": [
             {
               "rows": [
                 {
-                  "title": `Semua Perintah`,
-                  "description": "",
-                  "rowId": `${_p}? all`
+                  "title": `All Commands`,
+                  "description": "Show all features",
+                  "rowId": ".? all"
                 }, {
                   "title": "Game",
-                  "description": "",
-                  "rowId": `${_p}? game`
+                  "description": "Game features",
+                  "rowId": ".? game"
 
                 }, {
                   "title": "XP",
-                  "description": "",
-                  "rowId": `${_p}? xp`
+                  "description": "Features level & usage limit",
+                  "rowId": ".? xp"
 
-                }, {
+                },  {
+                  "title": "Video Maker",
+                  "description": "Making Different Types Of Videos",
+                  "rowId": ".? .videomaker"
+
+                },{
                   "title": "Stiker",
-                  "description": "",
-                  "rowId": `${_p}? stiker`
-                }, {
-                  "title": "Kerang Ajaib",
-                  "description": "",
-                  "rowId": `${_p}? kerangajaib`
-                }, {
+                  "description": "Features for making stickers",
+                  "rowId": ".? stiker"
+                }, { 
+                "title": "Anime",
+                "description": "Anime Related Plugin",
+                "rowId": ".? anime"
+              },  {
                   "title": "Quotes",
-                  "description": "",
-                  "rowId": `${_p}? quotes`
+                  "description": "Gives You Random Quotes..",
+                  "rowId": ".? quotes"
                 }, {
                   "title": "Admin",
-                  "description": "",
-                  "rowId": `${_p}? admin`
+                  "description": "Group Admin Commands",
+                  "rowId": ".? admin"
                 }, {
                   "title": "Grup",
-                  "description": "",
-                  "rowId": `${_p}? grup`
+                  "description": "Group Related Commands",
+                  "rowId": ".? grup"
                 }, {
                   "title": "Premium",
-                  "description": "",
-                  "rowId": `${_p}? premium`
+                  "description": "Premium Users Plugins",
+                  "rowId": ".? premium"
                 }, {
                   "title": "Internet",
-                  "description": "",
-                  "rowId": `${_p}? internet`
+                  "description": "Commands Related To Internet",
+                  "rowId": ".? internet"
                 }, {
                   "title": "Anonymous",
-                  "description": "",
-                  "rowId": `${_p}? anonymous`
+                  "description": "To Start Anonymous Chatting",
+                  "rowId": ".? anonymous"
+                }, {
+                  "title": "Magic Shell",
+                  "description": "Random answer feature",
+                  "rowId": `.? magicshell`
                 }, {
                   "title": "Nulis & Logo",
-                  "description": "",
-                  "rowId": `${_p}? nulis`
+                  "description": "Text Maker Coammnds",
+                  "rowId": ".? nulis"
                 }, {
                   "title": "Downloader",
-                  "description": "",
-                  "rowId": `${_p}? downloader`
+                  "description": "Downloading Commnds",
+                  "rowId": ".? downloader"
                 }, {
                   "title": "Tools",
-                  "description": "",
-                  "rowId": `${_p}? tools`
+                  "description": "Tool features",
+                  "rowId": ".? tools"
+                }, {
+                  "title": "Voice Changer",
+                  "description": "To change the voice",
+                  "rowId": `.? audio`
                 }, {
                   "title": "Fun",
-                  "description": "",
-                  "rowId": `${_p}? fun`
+                  "description": "Just for fun",
+                  "rowId": ".? fun"
                 }, {
                   "title": "Database",
-                  "description": "",
-                  "rowId": `${_p}? database`
-                }, {
-                  "title": "Vote & Absen",
-                  "description": "",
-                  "rowId": `${_p}? vote`
-                }, {
-                  "title": "Al-Qur\'an",
-                  "description": "",
-                  "rowId": `${_p}? quran`
-                }, {
-                  "title": "Pengubah Suara",
-                  "description": "",
-                  "rowId": `${_p}? audio`
-                }, {
-                  "title": "Jadi Bot",
-                  "description": "",
-                  "rowId": `${_p}? jadibot`
-                }, {
-                  "title": "Info",
-                  "description": "",
-                  "rowId": `${_p}? info`
-                }, {
-                  "title": "Tanpa Kategori",
-                  "description": "",
-                  "rowId": `${_p}? tanpakategori`
-                }, {
+                  "description": "User database",
+                  "rowId": ".? database"
+                },{
                   "title": "Owner",
-                  "description": "",
-                  "rowId": `${_p}? owner`
+                  "description": "Owner's special features",
+                  "rowId": ".? owner"
                 }
               ]
             }
@@ -300,14 +276,13 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
         }
       }, {}), { waitForAck: true })
     }
-    // gunakan ini jika kamu menggunakan whatsapp bisnis
+    // use this if you use business whatsapp
     //   throw `
-    // ┌〔 DAFTAR MENU 〕
+    // ┌〔 LIST MENU 〕
     // ├ ${_p + command} all
     // ├ ${_p + command} game
     // ├ ${_p + command} xp
     // ├ ${_p + command} stiker
-    // ├ ${_p + command} kerang
     // ├ ${_p + command} quotes
     // ├ ${_p + command} admin
     // ├ ${_p + command} group
@@ -324,7 +299,6 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     // ├ ${_p + command} audio
     // ├ ${_p + command} jadibot
     // ├ ${_p + command} info
-    // ├ ${_p + command} tanpa kategori
     // ├ ${_p + command} owner
     // └────  
     //     `.trim()
@@ -342,7 +316,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     let header = conn.menu.header || defaultMenu.header
     let body = conn.menu.body || defaultMenu.body
     let footer = conn.menu.footer || defaultMenu.footer
-    let after = conn.menu.after || (conn.user.jid == global.conn.user.jid ? '' : `Dipersembahkan oleh https://wa.me/${global.conn.user.jid.split`@`[0]}`) + defaultMenu.after
+    let after = conn.menu.after || (conn.user.jid == global.conn.user.jid ? '' : `Presented by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + defaultMenu.after
     let _text = [
       before,
       ...Object.keys(tags).map(tag => {
@@ -371,21 +345,21 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       exp: exp - min,
       maxexp: xp,
       totalexp: exp,
-      xp4levelup: max - exp <= 0 ? `Siap untuk *${_p}levelup*` : `${max - exp} XP lagi untuk levelup`,
+      xp4levelup: max - exp <= 0 ? `Ready for *${_p}levelup*` : `${max - exp} More XP for levelup`,
       github: package.homepage ? package.homepage.url || package.homepage : '[unknown github url]',
-      level, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
+      level, limit, name, weton, week, date, time, totalreg, rtotalreg, role,
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), 'made with ❤️ by ariffb', 'Pemilik Bot', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
+    await conn.send2ButtonLoc(m.chat, await (await fetch("https://telegra.ph/file/e32f2651bac64b6d62c81.jpg")).buffer(), text.trim(), 'Made With 🤍 by Aju', 'Owner Bot', ',owner', 'All Commands', '.? all', m)
   } catch (e) {
-    conn.reply(m.chat, 'Maaf, menu sedang error', m)
+    conn.reply(m.chat, 'Sorry, Try Again', m)
     throw e
   }
 }
-handler.help = ['menu', 'help', '?']
+handler.help = ['menu', 'help','list','aju', '?']
 handler.tags = ['main']
-handler.command = /^(menu|help|\?)$/i
+handler.command = /^(menu|help|eva|list|\?)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
@@ -410,19 +384,19 @@ function clockString(ms) {
   return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
 }
 function ucapan() {
-  const time = moment.tz('Asia/Jakarta').format('HH')
-  res = "Selamat dinihari"
+  const time = moment.tz('Asia/Kolkata').format('HH')
+  res = "Good Morning 🌄"
   if (time >= 4) {
-    res = "Selamat pagi"
+    res = "Good Morning 🌞"
   }
   if (time > 10) {
-    res = "Selamat siang"
+    res = "Good afternoon 🌅"
   }
   if (time >= 15) {
-    res = "Selamat sore"
+    res = "Good Evening 🌆"
   }
   if (time >= 18) {
-    res = "Selamat malam"
+    res = "Good Night 🌌"
   }
   return res
 }
