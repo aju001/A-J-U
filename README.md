@@ -1,8 +1,8 @@
 
 <p align="center">
-	<img src="https://telegra.ph/file/fd4230902e75d397d8667.jpg" width="200" style="margin-left: auto;margin-right: auto;display: block;">
+	<img src="https://i.ibb.co/Y2mXdR5/ajuser.jpg" width="200" style="margin-left: auto;margin-right: auto;display: block;">
 </p>
-<h1 align="center">Eva</h1>
+<h1 align="center">AJU</h1>
 
 # FOR THE SESSION !!
 
@@ -21,9 +21,9 @@ FORK THIS REPL..
 
 ## UPDATE!!
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/SudoAnirudh/E-V-A)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/aju001/A-J-U)
 
-[![My Bot OFF](https://img.shields.io/badge/MyBot-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](http://wa.me/13656503237?text=.menu)
+[![My Bot OFF](https://img.shields.io/badge/MyBot-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](http://wa.me/19014016638?text=.menu)
 **BOT ON**
 
 ## FOR WINDOWS/VPS/RDP USERS
@@ -34,7 +34,7 @@ FORK THIS REPL..
 * Download & Instal ImageMagick [`Click here`](https://imagemagick.org/script/download.php)
 
 ```bash
-git clone https://github.com/SudoAnirudh/E-V-A
+git clone https://github.com/aju001/A-J-U
 npm install
 npm update
 npm index
@@ -44,8 +44,8 @@ npm index
 
 ## FOR TERMUX USERS
 ```bash
-git clone https://github.com/SudoAnirudh/E-V-A
-cd _E-V-A_
+git clone https://github.com/aju001/A-J-U
+cd A-J-U
 npm i
 npm update
 node .
