@@ -18,17 +18,17 @@ let handler = async (m, { conn, usedPrefix }) => {
     let usersLevel = sortedLevel.map(enumGetKey)
     let { min, xp, max } = levelling.xpRange(user.level, global.multiplier)
     if (!levelling.canLevelUp(user.level, user.exp, global.multiplier)) {
-      let rank = 'https://telegra.ph/file/fd4230902e75d397d8667.jpg'
+      let rank = 'https://i.ibb.co/Y2mXdR5/ajuser.jpg'
         {
-          await conn.sendButtonImg(m.chat, await (await fetch(rank)).buffer(), `Level ${name} ${user.level} (${user.exp - min}/${xp})\nNot enough ${max - user.exp} again!`.trim(), '© Eva', 'AUTO LEVEL UP', `${usedPrefix}on autolevelup`, m)
+          await conn.sendButtonImg(m.chat, await (await fetch(rank)).buffer(), `Level ${name} ${user.level} (${user.exp - min}/${xp})\nNot enough ${max - user.exp} again!`.trim(), '© Aju', 'AUTO LEVEL UP', `${usedPrefix}on autolevelup`, m)
         }
     }
     let before = user.level * 1
     while (levelling.canLevelUp(user.level, user.exp, global.multiplier)) user.level++
     if (before !== user.level) {
-      let rank = 'https://telegra.ph/file/fd4230902e75d397d8667.jpg'
+      let rank = 'https://i.ibb.co/Y2mXdR5/ajuser.jpg'
         {
-          await conn.sendButtonImg(m.chat, await (await fetch(rank)).buffer(), `${name} Level Up!\n_${before}_ -> ${user.level}`.trim(), '© Eva', 'AUTO LEVEL UP', `${usedPrefix}on autolevelup`, m)
+          await conn.sendButtonImg(m.chat, await (await fetch(rank)).buffer(), `${name} Level Up!\n_${before}_ -> ${user.level}`.trim(), '© Aju', 'AUTO LEVEL UP', `${usedPrefix}on autolevelup`, m)
         }
     }
   }
