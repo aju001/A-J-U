@@ -32,8 +32,8 @@ handler.all = async function (m, { isBlocked }) {
 ├ .join Group Link
 └────
 
-https://github.com/SudoAnirudh/E-V-A
-`.trim(), '© Eva', ' Bot Owner', ',owner', m)
+https://github.com/aju001/A-J-U
+`.trim(), '© Aju', ' Bot Owner', ',owner', m)
     }
 
     // backup db
@@ -56,7 +56,7 @@ https://github.com/SudoAnirudh/E-V-A
     if (new Date() * 1 - setting.status > 1000) {
         let _uptime = process.uptime() * 1000
         let uptime = clockString(_uptime)
-        await this.setStatus(`Active during ${uptime} | Mode: ${global.opts['self'] ? 'Private' : setting.groupOnly ? 'Group Only' : 'Public'} | Eva by Anirudh`).catch(_ => _)
+        await this.setStatus(`Active during ${uptime} | Mode: ${global.opts['self'] ? 'Private' : setting.groupOnly ? 'Group Only' : 'Public'} | AJU by Aju`).catch(_ => _)
         setting.status = new Date() * 1
     }
 
