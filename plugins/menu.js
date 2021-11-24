@@ -173,7 +173,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
            *TIME* : ${time},
            *WEEK* : ${week},
            *DATE* : ${date},
-           *OWNER* : Anirudh,
+           *OWNER* : Aju,
           📣 *Note* : Don't spam bot`
           .trim(),
            "description": "© Aju",
