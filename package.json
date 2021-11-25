@@ -14,17 +14,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SudoAnirudh/E-V-A.git"
+    "url": "git+https://github.com/aju001/A-J-U.git"
   },
   "keywords": [
     "whatsapp-bot"
   ],
-  "author": "SudoAnirudh",
+  "author": "SudoAju",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SudoAnirudh/E-V-A/issues"
+    "url": "https://github.com/aju001/A-J-U/issues"
   },
-  "homepage": "https://github.com/SudoAnirudh/E-V-A",
+  "homepage": "https://github.com/aju001/A-J-U ",
   "dependencies": {
     "@adiwajshing/baileys": "github:adiwajshing/baileys",
     "awesome-phonenumber": "^2.54.0",
