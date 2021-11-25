@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/aju001/A-J-U/issues"
   },
-  "homepage": "https://github.com/aju001/A-J-U ",
+  "homepage": "https://github.com/aju001/A-J-U",
   "dependencies": {
     "@adiwajshing/baileys": "github:adiwajshing/baileys",
     "awesome-phonenumber": "^2.54.0",
