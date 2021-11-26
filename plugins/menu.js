@@ -684,7 +684,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-    await conn.send2ButtonLoc(m.chat, await.buffer(), text.trim(), 'made with 🤍 by Aju', 'Owner', `${_p}owner`, 'Aju', `${_p}Aju`, m)
+    await conn.send2ButtonLoc(m.chat, text.trim(), 'made with 🤍 by Aju', 'Owner', `${_p}owner`, 'Aju', `${_p}Aju`, m)
 
   } catch (e) {
 
