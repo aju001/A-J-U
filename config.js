@@ -36,7 +36,7 @@ global.author = 'Aju'
 
 global.wait = '_*Please Wait..*_'
 global.eror = '_*Server Error*_'
-global.fla = 'https://ibb.co/BjhN3hr'
+global.fla = 'https://i.ibb.co/kQ98t1k/AJU.jpg'
 
 global.watermark = '© AJU'
 
