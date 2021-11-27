@@ -1,6 +1,6 @@
 
 <p align="center">
-	<img src="https://i.ibb.co/kQ98t1k/AJU.jpg" width="400" style="margin-left: auto;margin-right: auto;display: block;">
+	<img src="https://i.ibb.co/kQ98t1k/AJU.jpg" width="300" style="margin-left: auto;margin-right: auto;display: block;">
 </p>
 <h1 align="center">A-J-U</h1>
 
