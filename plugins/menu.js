@@ -20,7 +20,7 @@ const defaultMenu = {
 
 🔸Hai, %name!
 
-🔸 Youtube:https://youtube.com/channel/UCk4uZXPnYwPSo2YlQECp1RA
+🔸 Youtube: _https://youtube.com/channel/UCk4uZXPnYwPSo2YlQECp1RA_
 
 🔸Instagram:https://www.instagram.com/__ajuz___001
 
